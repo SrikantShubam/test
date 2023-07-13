@@ -3865,7 +3865,7 @@ html {
   
   .paragraph-regular {
     letter-spacing: -.02em;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     font-size: 16px;
     line-height: 1.8;
   }
@@ -4195,10 +4195,10 @@ html {
   }
   
   .testimonial-quote {
-    letter-spacing: -.02em;
+    letter-spacing: -.03em;
     margin-top: 0;
-    margin-bottom: 24px;
-    font-size: 24px;
+    margin-bottom: 12px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.4;
   }
