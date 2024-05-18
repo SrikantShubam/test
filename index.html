@@ -406,7 +406,7 @@
     </div>
    
   </div>
-  <section class="section">
+  <!-- <section class="section">
     <div class="div-block-4">
       <div class="div-block-5"></div>
       <div class="div-block-6">
@@ -422,8 +422,164 @@
         <a href="/Webinar.html" class="button w-button">Click here</a>
       </div>
     </div>
-  </section>
-  
+  </section> -->
+  <style>
+    /* Background overlay */
+    .overlay {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+        justify-content: center; /* Center the popup */
+        align-items: center; /* Center the popup */
+    }
+    /* Popup content */
+    .popup {
+        background-color: #fff;
+       
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 850px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    /* Text and image container */
+    .popup-container {
+        display: flex;
+    }
+    /* Text section */
+    .popup-text {
+        flex: 1;
+        padding: 30px;
+        color: #000080;
+    }
+    .popup-text p{
+    padding-top: 30px;
+    }
+    .popup-text h3 {
+      font-size: 30px;
+        margin-top: 0;
+    }
+    /* Image section */
+    .popup-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .popup-image img {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    /* Close button */
+    .close-btn {
+        position: absolute;
+        top: -10px;
+        right: -20px;
+        background-color: black;
+         border-radius: 50%;
+        color: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    }
+    .close-btn:hover {
+        color: #f00;
+    }
+    /* CTA button */
+    .cta-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #25D366; /* WhatsApp green */
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+    }
+    .cta-btn:hover {
+        background-color: #128C7E;
+    }
+    @media screen and (max-width: 991px) {
+      .overlay{
+        height: 70%;
+      }
+      .popup-text h3{
+        font-size: 24px;
+      }
+      .popup-text p{
+    padding-top: 0px;
+    }
+      .popup-image{
+        flex: 0 !important;;
+      
+      }
+      .popup-image img {
+        display: none;
+     
+    }
+    .popup-text p{
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 20px;
+
+    }
+    
+    }
+</style>
+<div id="popupOverlay" class="overlay">
+  <div class="popup">
+      <button class="close-btn">&times;</button>
+      <div class="popup-container">
+          <div class="popup-text">
+              <h3>Pursue CFP through us and we guarantee you <span style="color: red !important;">100% placement assistance </span>through our exclusive Corporate Tie-ups</h3>
+              <p></p>
+              <a href="https://api.whatsapp.com/send/?phone=919820540293&text&type=phone_number&app_absent=0" target="_blank" class="cta-btn">Contact Us on WhatsApp</a>
+          </div>
+          <div class="popup-image">
+              <img src="../assets/images/join_us_now_maestrro.jpeg" alt="Guaranteed Placement">
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+      // Get the overlay and popup elements
+      var overlay = document.getElementById("popupOverlay");
+      var closeButton = document.querySelector(".close-btn");
+
+      // Show the overlay and popup when the page loads
+      overlay.style.display = "flex";
+
+      // Hide the overlay and popup when the close button is clicked
+      closeButton.onclick = function() {
+          overlay.style.display = "none";
+      }
+
+      // Optional: Hide the overlay and popup when clicking outside the popup
+      overlay.onclick = function(event) {
+          if (event.target == overlay) {
+              overlay.style.display = "none";
+          }
+      }
+  });
+</script>
   <div class="cf-flex-section-3">
     <div class="cf-services-main-wrapper">
       <div id="services-1" class="cf-services-page-contain">
@@ -1106,7 +1262,7 @@
         <div class="waves-divider-footer-2"></div>
         <div class="waves-bottom-footer-2">
           <div class="waves---paragraph-small-3">
-            Library designed with loved by Srikant Shubham, powered by Webflow
+            Designed and Developed by Srikant Shubham
           </div>
           <div class="waves-bottom-right-footer-2">
             <a href="tel:+916202130675" class="w-inline-block"

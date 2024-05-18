@@ -349,14 +349,7 @@ img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
-.div-block-5 {
-  width: 100%;
-  height: 50%;
-  opacity: .34;
-  background-image: linear-gradient(#28257e, #fff);
-  position: absolute;
-  overflow: none!important;
-}
+
 audio, canvas, progress, video {
   vertical-align: baseline;
   display: inline-block;
@@ -414,11 +407,27 @@ small {
   margin-bottom: 0;
   padding-top: 0;
   position: absolute;
-  top: auto;
-  bottom: auto;
-  left: auto;
-  right: auto;
 }
+/* .div-block-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  background-image: linear-gradient(#28257e, #fff);
+  overflow: none !important;
+} */
+
+
+
+.content-container {
+  position: relative;
+  z-index: 1;
+}
+
 
 sub, sup {
   vertical-align: baseline;
@@ -6211,7 +6220,7 @@ blockquote {
   -webkit-text-fill-color: inherit;
   object-fit: cover;
   background-color: #fff;
-  background-image: url("https://uploads-ssl.webflow.com/645e1049c8fcbff22dc45caf/64e8a167bcf99065aedc411f_2.jpg");
+  background-image: url('../images/webinar.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6222,6 +6231,19 @@ blockquote {
   padding-bottom: 390px;
   padding-left: 0;
   overflow: visible;
+  position: relative; /* Add this line */
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(#28257e, #fff);
+  opacity: 0.24;
+  z-index: 1; /* Add this line */
 }
 
 @media screen and (max-width: 991px) {
@@ -7622,4 +7644,11 @@ blockquote {
   bottom: 90px;
   opacity: 1;
   visibility: visible;
+}
+
+
+
+
+#mar-left{
+  padding-left: 10rem;
 }
